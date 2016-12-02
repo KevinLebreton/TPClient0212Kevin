@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14799328974700" configfile="/ProxiBanqueJPAJSF/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="122" y="946" id="pf14803240964400" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14803240964411 pf14803240964412 pf14803323063325 pf14803399683667 pf14803489009889" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listeClient.xhtml" x="338" y="178" id="pf14803240964413" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14803240964411" path="/listeClient.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="ajoutClient.xhtml" x="338" y="562" id="pf14803240964414" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14803240964412" path="/ajoutClient.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="modifierClient.xhtml" x="338" y="946" id="pf14803323063326" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf14803323063325" path="/modifierClient.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="creationCompte.xhtml" x="338" y="1330" id="pf14803399683678" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" inlinks="pf14803399683667" path="/creationCompte.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listeCompte.xhtml" x="338" y="1714" id="pf148034890098810" referenceLink="//@navigationRule.0/@navigationCase.4/@toViewId|" inlinks="pf14803489009889" path="/listeCompte.xhtml"/>
+  <links id="pf14803240964411" target="pf14803240964413" source="pf14803240964400" outcome="listeClient" redirect="true"/>
+  <links id="pf14803240964412" target="pf14803240964414" source="pf14803240964400" outcome="ajoutClient"/>
+  <links id="pf14803323063325" target="pf14803323063326" source="pf14803240964400" outcome="modifierClient"/>
+  <links id="pf14803399683667" target="pf14803399683678" source="pf14803240964400" outcome="creationCompte"/>
+  <links id="pf14803489009889" target="pf148034890098810" source="pf14803240964400" outcome="listeCompte"/>
+</pageflow:Pageflow>

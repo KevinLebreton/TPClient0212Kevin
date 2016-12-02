@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	version="2.2">
+	<application>
+		<resource-bundle>
+			<base-name>proxibanque_msg</base-name>
+			<var>messages</var>
+		</resource-bundle>
+	</application>
+
+	<navigation-rule>
+		<from-view-id>/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listeClient</from-outcome>
+			<to-view-id>/listeClient.xhtml</to-view-id>
+			<redirect></redirect>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>ajoutClient</from-outcome>
+			<to-view-id>/ajoutClient.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>modifierClient</from-outcome>
+			<to-view-id>/modifierClient.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>creationCompte</from-outcome>
+			<to-view-id>/creationCompte.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>listeCompte</from-outcome>
+			<to-view-id>/listeCompte.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>virement</from-outcome>
+			<to-view-id>/virement.xhtml</to-view-id>
+		</navigation-case>
+		<!-- </navigation-rule> -->
+		<!-- <navigation-rule> -->
+		<!-- <from-view-id>/inscription.xhtml</from-view-id> -->
+		<!-- <navigation-case> -->
+		<!-- <from-outcome>topics</from-outcome> -->
+		<!-- <to-view-id>topics.xhtml</to-view-id> -->
+		<!-- </navigation-case> -->
+	</navigation-rule>
+
+</faces-config>

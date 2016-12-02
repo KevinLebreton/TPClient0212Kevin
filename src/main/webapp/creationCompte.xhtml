@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	template="/resources/template/template.xhtml">
+
+
+	<div class="body">
+
+		<ui:define name="title">
+			<h2>Creer un compte</h2>
+		</ui:define>
+
+		<ui:define name="body">
+			<h:form>
+				<h:panelGrid columns="3">
+
+					<h:outputLabel>Client n°</h:outputLabel>
+					<h:inputText value="#{cl.idClient}" id="client" />
+					<h:message for="client" />
+
+					<h:outputLabel>Solde</h:outputLabel>
+					<h:inputText value="#{compteBancaire.solde}" id="solde" />
+					<h:message for="solde" />
+
+					<h:outputLabel>Type de Compte</h:outputLabel>
+					<h:selectOneMenu id="typeCompte"
+						value="#{compteBancaire.typeCompte}">
+						<f:selectItem itemValue="COURANT" itemLabel="compte courant"></f:selectItem>
+						<f:selectItem itemValue="EPARGNE" itemLabel="compte epargne"></f:selectItem>
+					</h:selectOneMenu>
+
+					<h:outputLabel />
+					<h:commandButton value="Enregistrer"
+						action="#{compteController.creerCompteClient(cl.idClient, compteBancaire)}" />
+
+				</h:panelGrid>
+			</h:form>
+		</ui:define>
+	</div>
+</ui:composition>
